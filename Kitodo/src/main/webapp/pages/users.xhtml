@@ -50,6 +50,7 @@
                             rendered="#{SecurityAccessController.hasAuthorityToAddAuthority()}"
                             icon="fa fa-plus"/>
             </p:menuButton>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </h:form>
         <h:form id="configureColumnsForm"
                 rendered="#{SecurityAccessController.hasAuthorityToConfigureColumns()}">

@@ -44,7 +44,7 @@
                                           value="#{LoginForm.loggedUser.surname}, #{LoginForm.loggedUser.name}"/>
                         </h:panelGroup>
                         <h:panelGroup>
-                            <form action="${request.contextPath}/logout" method="POST">
+                            <form action="${request.contextPath}/logout?${_csrf.parameterName}=${_csrf.token}" method="POST">
                                 <input id="logout" type="submit" value="#{msgs.logout}"/>
                                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                             </form>

@@ -44,6 +44,7 @@
                             rendered="#{SecurityAccessController.hasAuthorityToAddRuleset()}"
                             id="newRulesetButton" icon="fa fa-plus"/>
             </p:menuButton>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </h:form>
         <h:form id="configureColumnsForm" rendered="#{SecurityAccessController.hasAuthorityToConfigureColumns()}">
             <p:selectCheckboxMenu styleClass="configure-columns-button secondary"
