@@ -285,8 +285,7 @@ public class TaskService extends ProjectSearchService<Task, TaskDTO, TaskDAO> {
         taskDTO.setCorrection(TaskTypeField.CORRECTION.getBooleanValue(jsonObject));
         taskDTO.setTypeAutomatic(TaskTypeField.TYPE_AUTOMATIC.getBooleanValue(jsonObject));
         taskDTO.setTypeMetadata(TaskTypeField.TYPE_METADATA.getBooleanValue(jsonObject));
-        taskDTO.setTypeImagesWrite(TaskTypeField.TYPE_IMAGES_WRITE.getBooleanValue(jsonObject));
-        taskDTO.setTypeImagesRead(TaskTypeField.TYPE_IMAGES_READ.getBooleanValue(jsonObject));
+        taskDTO.setTypeImages(TaskTypeField.TYPE_IMAGES.getBooleanValue(jsonObject));
         taskDTO.setBatchStep(TaskTypeField.BATCH_STEP.getBooleanValue(jsonObject));
         taskDTO.setRolesSize(TaskTypeField.ROLES.getSizeOfProperty(jsonObject));
 

@@ -188,7 +188,7 @@ public class CurrentTaskForm extends BaseForm {
                 task.setProcessingBegin(new Date());
             }
 
-            if (task.isTypeImagesRead() || task.isTypeImagesWrite()) {
+            if (task.isTypeImages()) {
                 try {
                     URI imagesOrigDirectory = ServiceManager.getProcessService().getImagesOriginDirectory(false,
                         task.getProcess());

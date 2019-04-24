@@ -40,8 +40,7 @@ public class TaskDTO extends BaseDTO {
     private boolean correction;
     private boolean typeAutomatic;
     private boolean typeMetadata;
-    private boolean typeImagesRead;
-    private boolean typeImagesWrite;
+    private boolean typeImages;
     private boolean batchStep;
     private boolean batchAvailable;
 
@@ -387,41 +386,22 @@ public class TaskDTO extends BaseDTO {
     }
 
     /**
-     * Get information if task type is images read.
+     * Get information if task type is images.
      *
      * @return true or false
      */
-    public boolean isTypeImagesRead() {
-        return typeImagesRead;
+    public boolean isTypeImages() {
+        return typeImages;
     }
 
     /**
-     * Set information if task type is images read.
+     * Set information if task type is images.
      *
-     * @param typeImagesRead
+     * @param typeImages
      *            as boolean
      */
-    public void setTypeImagesRead(boolean typeImagesRead) {
-        this.typeImagesRead = typeImagesRead;
-    }
-
-    /**
-     * Get information if task type is images write.
-     *
-     * @return true or false
-     */
-    public boolean isTypeImagesWrite() {
-        return typeImagesWrite;
-    }
-
-    /**
-     * Set information if task type is images write.
-     *
-     * @param typeImagesWrite
-     *            as boolean
-     */
-    public void setTypeImagesWrite(boolean typeImagesWrite) {
-        this.typeImagesWrite = typeImagesWrite;
+    public void setTypeImages(boolean typeImages) {
+        this.typeImages = typeImages;
     }
 
     /**

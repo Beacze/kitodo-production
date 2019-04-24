@@ -251,7 +251,7 @@ public class WorkflowControllerService {
 
                 // if it is an image task, then download the images into the
                 // user home directory
-                if (task.isTypeImagesRead() || task.isTypeImagesWrite()) {
+                if (task.isTypeImages()) {
                     downloadToHome(task);
                 }
             } else {

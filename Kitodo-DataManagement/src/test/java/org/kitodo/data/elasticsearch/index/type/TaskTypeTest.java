@@ -145,10 +145,8 @@ public class TaskTypeTest {
             TaskTypeField.TYPE_AUTOMATIC.getBooleanValue(actual));
         assertTrue("Key typeMetadata doesn't match to given value!",
             TaskTypeField.TYPE_METADATA.getBooleanValue(actual));
-        assertFalse("Key typeImagesWrite doesn't match to given value!",
-            TaskTypeField.TYPE_IMAGES_WRITE.getBooleanValue(actual));
-        assertFalse("Key typeImagesRead doesn't match to given value!",
-            TaskTypeField.TYPE_IMAGES_READ.getBooleanValue(actual));
+        assertFalse("Key typeImages doesn't match to given value!",
+            TaskTypeField.TYPE_IMAGES.getBooleanValue(actual));
         assertEquals("Key processForTask.id doesn't match to given value!", 1,
             TaskTypeField.PROCESS_ID.getIntValue(actual));
         assertEquals("Key processForTask.title doesn't match to given value!", "First",
@@ -200,10 +198,8 @@ public class TaskTypeTest {
             TaskTypeField.TYPE_AUTOMATIC.getBooleanValue(actual));
         assertFalse("Key typeMetadata doesn't match to given value!",
             TaskTypeField.TYPE_METADATA.getBooleanValue(actual));
-        assertFalse("Key typeImagesWrite doesn't match to given value!",
-            TaskTypeField.TYPE_IMAGES_WRITE.getBooleanValue(actual));
-        assertFalse("Key typeImagesRead doesn't match to given value!",
-            TaskTypeField.TYPE_IMAGES_READ.getBooleanValue(actual));
+        assertFalse("Key typeImages doesn't match to given value!",
+            TaskTypeField.TYPE_IMAGES.getBooleanValue(actual));
         assertEquals("Key processForTask.id doesn't match to given value!", 0,
             TaskTypeField.PROCESS_ID.getIntValue(actual));
         assertEquals("Key processForTask.title doesn't match to given value!", "",
@@ -249,10 +245,8 @@ public class TaskTypeTest {
             TaskTypeField.TYPE_AUTOMATIC.getBooleanValue(actual));
         assertFalse("Key typeMetadata doesn't match to given value!",
             TaskTypeField.TYPE_METADATA.getBooleanValue(actual));
-        assertFalse("Key typeImagesWrite doesn't match to given value!",
-            TaskTypeField.TYPE_IMAGES_WRITE.getBooleanValue(actual));
-        assertFalse("Key typeImagesRead doesn't match to given value!",
-            TaskTypeField.TYPE_IMAGES_READ.getBooleanValue(actual));
+        assertFalse("Key typeImages doesn't match to given value!",
+            TaskTypeField.TYPE_IMAGES.getBooleanValue(actual));
         assertEquals("Key processForTask.id doesn't match to given value!", 0,
             TaskTypeField.PROCESS_ID.getIntValue(actual));
         assertEquals("Key processForTask.title doesn't match to given value!", "",
@@ -269,7 +263,7 @@ public class TaskTypeTest {
         Task task = prepareData().get(0);
         Map<String, Object> actual = taskType.createDocument(task);
 
-        assertEquals("Amount of keys is incorrect!", 25, actual.keySet().size());
+        assertEquals("Amount of keys is incorrect!", 24, actual.keySet().size());
 
         List<Map<String, Object>> roles = TaskTypeField.ROLES.getJsonArray(actual);
         Map<String, Object> role = roles.get(0);

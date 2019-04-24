@@ -823,10 +823,7 @@
                 "typeAutomatic": {
                     "type": "boolean"
                 },
-                "typeImagesRead": {
-                    "type": "boolean"
-                },
-                "typeImagesWrite": {
+                "typeImages": {
                     "type": "boolean"
                 },
                 "typeMetadata": {

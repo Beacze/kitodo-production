@@ -84,11 +84,8 @@ public class Task extends BaseIndexedBean {
     @Column(name = "typeAutomatic")
     private boolean typeAutomatic = false;
 
-    @Column(name = "typeImagesRead")
-    private boolean typeImagesRead = false;
-
-    @Column(name = "typeImagesWrite")
-    private boolean typeImagesWrite = false;
+    @Column(name = "typeImages")
+    private boolean typeImages = false;
 
     @Column(name = "typeGenerateImages")
     private boolean typeGenerateImages = false;
@@ -179,8 +176,7 @@ public class Task extends BaseIndexedBean {
         this.typeAcceptClose = templateTask.isTypeAcceptClose();
         this.typeCloseVerify = templateTask.isTypeCloseVerify();
         this.typeExportDMS = templateTask.isTypeExportDMS();
-        this.typeImagesRead = templateTask.isTypeImagesRead();
-        this.typeImagesWrite = templateTask.isTypeImagesWrite();
+        this.typeImages = templateTask.isTypeImages();
         this.typeMetadata = templateTask.isTypeMetadata();
         this.separateStructure = templateTask.isSeparateStructure();
         this.typeGenerateImages = templateTask.isTypeGenerateImages();
@@ -424,30 +420,12 @@ public class Task extends BaseIndexedBean {
         return validationFolders;
     }
 
-    public boolean isTypeImagesRead() {
-        return this.typeImagesRead;
+    public boolean isTypeImages() {
+        return this.typeImages;
     }
 
-    public void setTypeImagesRead(boolean typeImagesRead) {
-        this.typeImagesRead = typeImagesRead;
-    }
-
-    public boolean isTypeImagesWrite() {
-        return this.typeImagesWrite;
-    }
-
-    /**
-     * Set task type images. If types is true, it also sets type images read to
-     * true.
-     *
-     * @param typeImagesWrite
-     *            true or false
-     */
-    public void setTypeImagesWrite(boolean typeImagesWrite) {
-        this.typeImagesWrite = typeImagesWrite;
-        if (typeImagesWrite) {
-            this.typeImagesRead = true;
-        }
+    public void setTypeImages(boolean typeImages) {
+        this.typeImages = typeImages;
     }
 
     /**

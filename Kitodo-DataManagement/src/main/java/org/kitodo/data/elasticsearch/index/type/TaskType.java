@@ -45,8 +45,7 @@ public class TaskType extends BaseType<Task> {
         jsonObject.put(TaskTypeField.CORRECTION.getKey(), task.isCorrection());
         jsonObject.put(TaskTypeField.TYPE_METADATA.getKey(), task.isTypeMetadata());
         jsonObject.put(TaskTypeField.TYPE_AUTOMATIC.getKey(), task.isTypeAutomatic());
-        jsonObject.put(TaskTypeField.TYPE_IMAGES_READ.getKey(), task.isTypeImagesRead());
-        jsonObject.put(TaskTypeField.TYPE_IMAGES_WRITE.getKey(), task.isTypeImagesWrite());
+        jsonObject.put(TaskTypeField.TYPE_IMAGES.getKey(), task.isTypeImages());
         jsonObject.put(TaskTypeField.BATCH_STEP.getKey(), task.isBatchStep());
         jsonObject.put(TaskTypeField.PROCESSING_USER_ID.getKey(), processingUser);
         if (processingUser > 0) {
