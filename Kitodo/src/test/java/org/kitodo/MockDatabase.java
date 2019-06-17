@@ -1415,7 +1415,7 @@ public class MockDatabase {
         ServiceManager.getProcessService().save(sixthProcess);
     }
 
-    private static void insertDataForScriptParallelTasks() throws DAOException, DataException, IOException, WorkflowException {
+    private static void insertDataForScriptParallelTasks() throws Exception {
         Workflow workflow = new Workflow("gateway-test5");
         workflow.setStatus(WorkflowStatus.ACTIVE);
         workflow.setClient(ServiceManager.getClientService().getById(1));
